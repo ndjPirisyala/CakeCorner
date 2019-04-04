@@ -1,0 +1,52 @@
+<h3><b>{{cake_name}}</b></h3>
+
+<br>
+
+<div class="btn-group" id="shape">
+    <button type="button" class="btn btn-danger" >Shape</button>
+    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="sr-only"></span>
+    </button>
+    <div class="dropdown-menu">
+        <li *ngFor="let element of shape_list">
+        <a class="dropdown-item" href="#">{{element}}</a>
+        </li>
+    </div>
+  </div>
+
+  <div class="btn-group" id="size">
+      <button type="button" class="btn btn-danger">Size</button>
+      <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only"></span>
+      </button>
+      <div class="dropdown-menu">
+          <li *ngFor="let element of size_list">
+          <a class="dropdown-item" href="#">{{element}}</a>
+          </li>
+      </div>
+    </div>
+
+    <div class="btn-group" id="flavour">
+        <button type="button" class="btn btn-danger">Flavour</button>
+        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="sr-only"></span>
+        </button>
+        <div class="dropdown-menu">
+            <li *ngFor="let element of flavour_list">
+            <a class="dropdown-item" href="#">{{element}}</a>
+            </li>
+        </div>
+      </div>
+    
+<h4><b>Frosting</b></h4>
+
+      <div class="row">
+          <div class="col-md-4">
+            <div class="thumbnail">
+                <img src="https://i.pinimg.com/originals/ab/67/53/ab6753ec1cef75f1cc2052487b1f4059.jpg" alt="Lights" style="width:50%">
+                <div class="caption">
+                  <p>Lorem ipsum...</p>
+                </div>
+            </div>
+          </div>
+
