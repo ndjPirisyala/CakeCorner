@@ -12,6 +12,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import { CustomizeFrostopComponent } from './customize-frostop/customize-frostop.component';
 import {MatGridListModule, MatCardModule} from '@angular/material';
+import { MatRadioModule, MatInputModule } from '@angular/material';
 
 
 @NgModule({
@@ -28,7 +29,9 @@ import {MatGridListModule, MatCardModule} from '@angular/material';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    MatRadioModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,4 +12,6 @@ export class CustomizeFrostopComponent implements OnInit {
   ngOnInit() {
   }
 
+  no_of_fros:number=10
+  no_of_tops:number=10
 }
