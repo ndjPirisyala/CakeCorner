@@ -10,7 +10,7 @@ import { CustomizationComponentComponent } from './customization-component/custo
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
-import { CustomizeShapeComponent } from './customize-shape/customize-shape.component';
+import { CustomizeFrostopComponent } from './customize-frostop/customize-frostop.component';
 import {MatGridListModule, MatCardModule} from '@angular/material';
 
 
@@ -20,7 +20,7 @@ import {MatGridListModule, MatCardModule} from '@angular/material';
     HeaderComponent,
     FooterComponent,
     CustomizationComponentComponent,
-    CustomizeShapeComponent,
+    CustomizeFrostopComponent,
   ],
   imports: [
     BrowserModule,
