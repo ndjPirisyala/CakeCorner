@@ -13,6 +13,8 @@ import { environment } from '../environments/environment';
 import { CustomizeFrostopComponent } from './customize-frostop/customize-frostop.component';
 import {MatGridListModule, MatCardModule} from '@angular/material';
 import { MatRadioModule, MatInputModule } from '@angular/material';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -22,6 +24,8 @@ import { MatRadioModule, MatInputModule } from '@angular/material';
     FooterComponent,
     CustomizationComponentComponent,
     CustomizeFrostopComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
