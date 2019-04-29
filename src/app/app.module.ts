@@ -25,7 +25,7 @@ import { RegisterComponent } from './register/register.component';
     CustomizationComponentComponent,
     CustomizeFrostopComponent,
     LoginComponent,
-    RegisterComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
