@@ -1,0 +1,26 @@
+
+<app-header></app-header>
+
+<div class="main">
+    <div class="row" >
+      <div class="column" *ngFor="let ins of UserProfileService.product">
+        <mat-card class="example-card">
+          <mat-card-header>
+           <!-- <div mat-card-avatar class="example-header-image"></div>-->
+            <mat-card-title>{{ins.title}}</mat-card-title>
+            <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+          </mat-card-header>
+          {{ins.image}}
+          <!--<img mat-card-image src="./assets/cake.jpg" alt="Photo of a Shiba Inu" height="400" width="200">-->
+          <mat-card-content>
+            <p>
+              {{ins.description}}
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button class="button mat-button">BUY</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      </div></div>
+<app-footer></app-footer>

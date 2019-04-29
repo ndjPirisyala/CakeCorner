@@ -1,0 +1,60 @@
+.img{
+    width:100px;
+    height:100px;
+ 
+ /*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
+     object-fit:scale-down;
+ 
+ }
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .example-card {
+    max-width: 400px;
+  }
+  .mat-card-title {
+    font-family: "Comic Sans MS", Comic Sans, cursive;
+  }
+   
+  .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .mat-button {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+  }
+  
+  .mat-button:hover {
+    background-color: #555555;
+    color: white;
+  }
+  .main{
+      margin-top:50px;
+      margin-left: 20px;
+  }
+  
+  
