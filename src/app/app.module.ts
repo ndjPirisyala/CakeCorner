@@ -16,6 +16,17 @@ import { MatRadioModule, MatInputModule } from '@angular/material';
 import { OrdersComponent } from './orders/orders.component';
 import { ActionsComponent } from './actions/actions.component';
 import { BirthdayComponent } from './birthdayCakes/birthday.component';
+import { AdminDashComponent } from './adminDash/adminDash.component';
+import { CakesComponent } from './cakes/cakes.component';
+import { CakeListComponent } from './cakes/cake-list/cake-list.component';
+import { CakeDetailComponent } from './cakes/cake-detail/cake-detail.component';
+import { CakeItemComponent } from './cakes/cake-list/cake-item/cake-item.component';
+import { DropdownDirective } from './shared/dropdown.directive';
+import { CakeStartComponent } from './cakes/cake-start/cake-start.component';
+import { CakeEditComponent } from './cakes/cake-edit/cake-edit.component';
+import { FormsModule, ReactiveFormsModule } from '../../node_modules/@angular/forms';
+import { CakeService } from './cakes/cake.service';
+import { HttpClientModule } from '../../node_modules/@angular/common/http';
 
 
 @NgModule({
@@ -27,7 +38,16 @@ import { BirthdayComponent } from './birthdayCakes/birthday.component';
     CustomizeFrostopComponent,
     OrdersComponent,
     ActionsComponent,
-    BirthdayComponent
+    BirthdayComponent,
+    AdminDashComponent,
+    CakesComponent,
+    CakeListComponent,
+    CakeDetailComponent,
+    CakeItemComponent,
+    DropdownDirective,
+    CakeStartComponent,
+    CakeEditComponent
+
   ],
   imports: [
     BrowserModule,
@@ -37,9 +57,12 @@ import { BirthdayComponent } from './birthdayCakes/birthday.component';
     MatGridListModule,
     MatCardModule,
     MatRadioModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [CakeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

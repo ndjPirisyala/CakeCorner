@@ -6,6 +6,12 @@ import {Component} from '@angular/core';
     styleUrls: ['./actions.component.scss']
   })
   export class ActionsComponent {
+  
+   
+
+    constructor(){}
+   
+    
    
   }
   
