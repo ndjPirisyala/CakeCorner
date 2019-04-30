@@ -27,6 +27,8 @@ import { CakeEditComponent } from './cakes/cake-edit/cake-edit.component';
 import { FormsModule, ReactiveFormsModule } from '../../node_modules/@angular/forms';
 import { CakeService } from './cakes/cake.service';
 import { HttpClientModule } from '../../node_modules/@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -46,7 +48,9 @@ import { HttpClientModule } from '../../node_modules/@angular/common/http';
     CakeItemComponent,
     DropdownDirective,
     CakeStartComponent,
-    CakeEditComponent
+    CakeEditComponent,
+    LoginComponent,
+    RegisterComponent
 
   ],
   imports: [
