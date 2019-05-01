@@ -1,11 +1,16 @@
 require('./config/config');
 require('./models/db');
+require('./config/passportConfig');
 const rtsIndex = require('./routes/index.router');
 const express=require('express');
 const bodyParser=require('body-parser');
 const mongoose=require('mongoose');
 const app=express();
 const cors = require('cors');
+const passport = require('passport');
+//const exphbs = require('express-handlebars');
+const path = require('path');
+//const multer = require('multer');//
 
 //EgDQ6gidVdo7g5e6
 /*mongoose.connect("mongodb+srv://vish:EgDQ6gidVdo7g5e6@cluster0-zzorc.mongodb.net/test?retryWrites=true",{ useNewUrlParser: true })
