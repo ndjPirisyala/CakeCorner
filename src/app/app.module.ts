@@ -26,9 +26,13 @@ import { CakeStartComponent } from './cakes/cake-start/cake-start.component';
 import { CakeEditComponent } from './cakes/cake-edit/cake-edit.component';
 import { FormsModule, ReactiveFormsModule } from '../../node_modules/@angular/forms';
 import { CakeService } from './cakes/cake.service';
-import { HttpClientModule } from '../../node_modules/@angular/common/http';
+import { HttpClientModule,HTTP_INTERCEPTORS} from '../../node_modules/@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserService } from './user/user.service';
+import { AuthGuard } from './auth/auth.guard';
+import { AuthInterceptor } from './auth/auth.interceptor';
 
 
 @NgModule({
@@ -50,7 +54,8 @@ import { RegisterComponent } from './register/register.component';
     CakeStartComponent,
     CakeEditComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    UserProfileComponent
 
   ],
   imports: [
@@ -66,7 +71,11 @@ import { RegisterComponent } from './register/register.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [CakeService],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+  },AuthGuard,CakeService,UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
