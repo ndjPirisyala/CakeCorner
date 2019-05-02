@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CustomizeFrostingComponent } from './customize-frosting/customize-frosting.component';
-import { CustomizeToppingComponent } from './customize-topping/customize-topping.component';
+import { CustomizeFrostopComponent } from './customize-frostop/customize-frostop.component';
 
 const routes: Routes = [
-  { path: 'customize-frosting', component: CustomizeFrostingComponent },
-  { path: 'customize-topping', component: CustomizeToppingComponent }
+  { path: 'customize-frostop', component: CustomizeFrostopComponent }
 ];
 
 @NgModule({

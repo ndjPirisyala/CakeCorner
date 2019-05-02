@@ -13,6 +13,7 @@ import {MatGridListModule, MatCardModule} from '@angular/material';
 import { MatRadioModule, MatInputModule } from '@angular/material';
 import { CustomizeToppingComponent } from './customize-topping/customize-topping.component';
 import { CustomizedCakeViewComponent } from './customized-cake-view/customized-cake-view.component';
+import { CustomizeFrostopComponent } from './customize-frostop/customize-frostop.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { CustomizedCakeViewComponent } from './customized-cake-view/customized-c
     CustomizationComponentComponent,
     CustomizeFrostingComponent,
     CustomizeToppingComponent,
-    CustomizedCakeViewComponent
+    CustomizedCakeViewComponent,
+    CustomizeFrostopComponent
   ],
   imports: [
     BrowserModule,
