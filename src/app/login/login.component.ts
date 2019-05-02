@@ -10,6 +10,7 @@ import { NgForm } from "@angular/forms";
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  constructor(private userService: UserService,private router : Router) { }
 
   model ={
     email :'',
@@ -18,7 +19,12 @@ export class LoginComponent implements OnInit {
   emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   serverErrorMessages: string;
 
-  constructor(private userService: UserService,private router : Router) { }
+  ngOnInit() {
+    if(this.userService.isLoggedIn())
+    this.router.navigateByUrl('/userprofile');
+  }
+
+
 
 
   onSubmit(form : NgForm){
@@ -33,9 +39,5 @@ export class LoginComponent implements OnInit {
     );
   }
 
-  ngOnInit() {
-    if(this.userService.isLoggedIn())
-    this.router.navigateByUrl('/userprofile');
-  }
 
 }
