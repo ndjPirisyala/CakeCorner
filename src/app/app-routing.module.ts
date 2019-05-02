@@ -3,7 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { CustomizeFrostopComponent } from './customize-frostop/customize-frostop.component';
 
 const routes: Routes = [
-  { path: 'customize-frostop', component: CustomizeFrostopComponent }
+  { path: 'customize-frostop', component: CustomizeFrostopComponent,
+  data: { size: 'selectedSize', shape: 'selectedShape', flavour: 'selectedFlavour' }
+}
 ];
 
 @NgModule({

@@ -11,23 +11,26 @@ export class CustomizationService {
   private selectedShape: string;
   private selectedFlavour: string;
 
-  getSize(){
+  public getSize(): string{
     return this.selectedSize;
   }
-  getShape(){
+  public getShape(): string{
     return this.selectedShape;
   }
-  getFlavour(){
+  public getFlavour(): string{
     return this.selectedFlavour;
   }
 
-  setSize(size: string){
+  public setSize(size: string): null{
     this.selectedSize = size;
+    return null;
   }
-  setShape(shape: string){
+  public setShape(shape: string): null{
     this.selectedSize = shape;
+    return null;
   }
-  setFlavour(flavour: string){
+  public setFlavour(flavour: string): null{
     this.selectedFlavour = flavour;
+    return null;
   }
 }

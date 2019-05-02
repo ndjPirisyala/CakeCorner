@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CustomizationService } from '../customization.service';
 
 @Component({
   selector: 'app-customization-component',
@@ -7,12 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomizationComponentComponent implements OnInit {
 
-  cakeName = 'Test Cake';
-  public selectedSize: string;
-  public selectedShape: string;
-  public selectedFlavour: string;
+  constructor( private data: CustomizationService ) { }
 
-  constructor() { }
+  cakeName = 'Test Cake';
+  private selectedSize: string;
+  private selectedShape: string;
+  private selectedFlavour: string;
 
   ngOnInit() {
   }
@@ -35,5 +36,9 @@ export class CustomizationComponentComponent implements OnInit {
     return null;
       }
 
- onClickView(){}
+ onClickView(){
+  this.data.setSize(this.selectedSize);
+  this.data.setShape(this.selectedShape);
+  this.data.setFlavour(this.selectedFlavour);
+ }
 }

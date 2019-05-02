@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CustomizationService } from '../customization.service';
 
 @Component({
   selector: 'app-customize-frosting',
@@ -7,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomizeFrostingComponent implements OnInit {
 
-  constructor() { }
+  constructor( private data: CustomizationService ) { }
+
+  private selectedSize = this.data.getSize();
+  private selectedShape = this.data.getShape();
+  private selectedFlavour = this.data.getFlavour();
 
   ngOnInit() {
   }
+
 }
