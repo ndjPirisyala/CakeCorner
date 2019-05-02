@@ -7,13 +7,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomizationComponentComponent implements OnInit {
 
+  cakeName = 'Test Cake';
+  public selectedSize: string;
+  public selectedShape: string;
+  public selectedFlavour: string;
+
   constructor() { }
 
   ngOnInit() {
   }
 
-  cake_name:string="Test Cake"
-  size_list:string[]=["Small","Medium","Large"]
-  shape_list:string[]=["Round","Square","Rectagle"]
-  flavour_list:string[]=["Chocolate","Vanilla"]
+  public sSize(size: string): null {
+    console.log(size);
+    this.selectedSize = size;
+    return null;
+    }
+
+  public sShape(shape: string): null {
+    console.log(shape);
+    this.selectedShape = shape;
+    return null;
+      }
+
+  public sFlavour(flavour: string): null {
+    console.log(flavour);
+    this.selectedFlavour = flavour;
+    return null;
+      }
+
+ onClickView(){}
 }

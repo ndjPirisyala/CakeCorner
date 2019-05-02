@@ -1,5 +1,5 @@
 <br>
-<h3><b>{{cake_name}}</b></h3>
+<h3><b>Make Your Own Cake!!!</b></h3>
 
 <br>
 
@@ -7,17 +7,17 @@
 <h4><b>Size</b></h4>
 
 <div class="custom-control custom-radio">
-    <input type="radio" class="custom-control-input" id="small" name="size_rb" mdbInput>
+    <input type="radio" class="custom-control-input" id="small" name="size_rb" (click)="sSize('Small')" mdbInput>
     <label class="custom-control-label" for="small">Small</label>
   </div>
-  
+
   <div class="custom-control custom-radio">
-    <input type="radio" class="custom-control-input" id="medium" name="size_rb" mdbInput>
+    <input type="radio" class="custom-control-input" id="medium" name="size_rb" (click)="sSize('Medium')" mdbInput>
     <label class="custom-control-label" for="medium">Medium</label>
   </div>
 
   <div class="custom-control custom-radio">
-      <input type="radio" class="custom-control-input" id="large" name="size_rb" mdbInput>
+      <input type="radio" class="custom-control-input" id="large" name="size_rb" (click)="sSize('Large')" mdbInput>
       <label class="custom-control-label" for="large">Large</label>
     </div>
   </div>
@@ -28,17 +28,17 @@
       <h4><b>Shape</b></h4>
 
     <div class="custom-control custom-radio">
-        <input type="radio" class="custom-control-input" id="square" name="shape_rb" mdbInput>
+        <input type="radio" class="custom-control-input" id="square" name="shape_rb" (click)="sShape('Square')" mdbInput>
         <label class="custom-control-label" for="square">Square</label>
       </div>
-      
+
       <div class="custom-control custom-radio">
-        <input type="radio" class="custom-control-input" id="round" name="shape_rb" mdbInput>
+        <input type="radio" class="custom-control-input" id="round" name="shape_rb" (click)="sShape('Round')" mdbInput>
         <label class="custom-control-label" for="round">Round</label>
       </div>
-    
+
       <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="rectangular" name="shape_rb" mdbInput>
+          <input type="radio" class="custom-control-input" id="rectangular" name="shape_rb" (click)="sShape('Rectangular')" mdbInput>
           <label class="custom-control-label" for="rectangular">Rectangular</label>
         </div>
       </div>
@@ -46,39 +46,43 @@
 
       <div id="flavour">
           <h4><b>Flavour</b></h4>
-    
+
         <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="chocolate" name="flavour_rb" mdbInput>
+            <input type="radio" class="custom-control-input" id="chocolate" name="flavour_rb" (click)="sFlavour('Chocolate')" mdbInput>
             <label class="custom-control-label" for="chocolate">Chocolate</label>
           </div>
-          
+
           <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="vanilla" name="flavour_rb" mdbInput>
+            <input type="radio" class="custom-control-input" id="vanilla" name="flavour_rb" (click)="sFlavour('Vanilla')" mdbInput>
             <label class="custom-control-label" for="vanilla">Vanilla</label>
           </div>
-        
+
           <div class="custom-control custom-radio">
-              <input type="radio" class="custom-control-input" id="butter" name="flavour_rb" mdbInput>
-              <label class="custom-control-label" for="butter">Butter</label>
+              <input type="radio" class="custom-control-input" id="butter" name="flavour_rb" (click)="sFlavour('Red Velvet')" mdbInput>
+              <label class="custom-control-label" for="butter">Red Velvet</label>
             </div>
           </div>
 
+<br><br>
 
+<nav>
+<a [routerLink]="['/customize-topping']" routerLinkActive="router-link-active" >
+  <button type="button" id="view_options_button" class="btn btn-info" (click)="onClickView()">View Frosting/Topping Options</button>
+  </a>
+</nav>
 
+<!-- <br><br>
 
-
-
+<app-customize-frosting></app-customize-frosting>
 
 <br><br>
-<h4><b>Frosting</b></h4>
 
-<div id="topping">
-  <h4><b>Topping</b></h4>
-</div>
+<app-customize-topping></app-customize-topping>
 
+<br><br>
 
-<app-customize-frostop></app-customize-frostop>
+<button type="button" id="view_button" class="btn btn-info" >View My Cake</button>
 
+<br><br><br>
 
-<button type="button" id="view_button" class="btn btn-info">View My Cake</button>
-
+<app-customized-cake-view></app-customized-cake-view> -->

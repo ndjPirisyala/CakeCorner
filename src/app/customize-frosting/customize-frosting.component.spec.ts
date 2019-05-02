@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CustomizeShapeComponent } from './customize-shape.component';
+import { CustomizeFrostingComponent } from './customize-frosting.component';
 
 describe('CustomizeShapeComponent', () => {
-  let component: CustomizeShapeComponent;
-  let fixture: ComponentFixture<CustomizeShapeComponent>;
+  let component: CustomizeFrostingComponent;
+  let fixture: ComponentFixture<CustomizeFrostingComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CustomizeShapeComponent ]
+      declarations: [ CustomizeFrostingComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CustomizeShapeComponent);
+    fixture = TestBed.createComponent(CustomizeFrostingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
