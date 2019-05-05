@@ -9,6 +9,10 @@ import { CakesComponent } from './cakes/cakes.component';
 import { CakeStartComponent } from './cakes/cake-start/cake-start.component';
 import { CakeDetailComponent } from './cakes/cake-detail/cake-detail.component';
 import { CakeEditComponent } from './cakes/cake-edit/cake-edit.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { AuthGuard } from './auth/auth.guard';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 const routes: Routes = [
    { path:'gallery',component:BirthdayComponent},
@@ -21,7 +25,12 @@ const routes: Routes = [
        {path:':id/edit',component:CakeEditComponent}
      ]}
    ]},
-   { path:'orders',component:OrdersComponent}
+   { path:'orders',component:OrdersComponent},
+   { path:'login',component:LoginComponent},
+   { path:'register',component:RegisterComponent},
+   {
+    path: 'userprofile', component: UserProfileComponent,canActivate:[AuthGuard]
+},
   
 ];
 

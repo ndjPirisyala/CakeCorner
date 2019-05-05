@@ -20,8 +20,8 @@ export const environment = {
     projectId: "cakecorner-d92b1",
     storageBucket: "cakecorner-d92b1.appspot.com",
     messagingSenderId: "580884490888"
-  }
-
+  },
+  apiBaseUrl1:'http://localhost:3000/api'
 
 };
 
