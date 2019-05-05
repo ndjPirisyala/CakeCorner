@@ -22,7 +22,7 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-    {{cake.description}}
+    {{cake?.description}}
   </div>
 </div>
 <div class="row">
@@ -30,5 +30,5 @@
     <ul class="list-group">
       <li class="list-group-item" *ngFor="let feature of cake.features">{{feature.feature}}</li>
     </ul>
-  </div>
+  </div> 
 </div>

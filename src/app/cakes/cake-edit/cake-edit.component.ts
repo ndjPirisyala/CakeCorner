@@ -10,7 +10,7 @@ import { Cake } from '../cake.model';
   styleUrls: ['./cake-edit.component.css']
 })
 export class CakeEditComponent implements OnInit {
-  id:number;
+  id:string;
   editMode=false;
   cakeForm:FormGroup;
   constructor(private route:ActivatedRoute,private cakeService:CakeService,private router:Router) { }
@@ -18,15 +18,15 @@ export class CakeEditComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(
       (params:Params)=>{
-        this.id = +params['id'];
+        this.id = params['id'];
         this.editMode=params['id']!=null;
         this.initForm();
       }
     );
   }
   onSubmit(){
-     const newCake=new Cake(this.cakeForm.value['name'],this.cakeForm.value['category'],1200,this.cakeForm.value['imagePath'],this.cakeForm.value['description'],this.cakeForm.value['features']);
-    //const newCake=new Cake(this.cakeForm.value['name'],this.cakeForm.value['category'],'',this.cakeForm.value['imagePath'],this.cakeForm.value['description'],'',[ ]);
+     const newCake=new Cake(this.id,this.cakeForm.value['name'],this.cakeForm.value['category'],1200,this.cakeForm.value['imagePath'],this.cakeForm.value['description'],this.cakeForm.value['features']);
+  // const newCake=new Cake(this.cakeForm.value['name'],this.cakeForm.value['category'],'',this.cakeForm.value['imagePath'],this.cakeForm.value['description'],'');
     if(this.editMode){
       this.cakeService.updateCake(this.id,newCake);
     }else{
@@ -48,30 +48,56 @@ export class CakeEditComponent implements OnInit {
     let cakeImagePath='';
     let cakeDescription='';
     let cakeCategory='';
+    let cakePrice;
     let cakeFeatures=new FormArray([]);
     if(this.editMode){
-      const cake=this.cakeService.getCake(this.id);
-      cakeName=cake.name;
-      cakeImagePath=cake.imagePath;
-      cakeDescription=cake.description;
-      cakeCategory=cake.category;
-      if(cake['features']){
-        for(let feature of cake.features){
-          cakeFeatures.push(
-            new FormGroup({
-              'feature':new FormControl(feature.feature,Validators.required)
-            })
-          );
-        }
-      }
+      // const cake=this.cakeService.getCake(this.id);
+      // cakeId=cake.id;
+      // cakeName=cake.name;
+      // cakeImagePath=cake.imagePath;
+      // cakeDescription=cake.description;
+      // cakeCategory=cake.category;
+
+
+     // this.cakeService.getCake(this.id)
+      //this.cakeService.cakeSelected.subscribe((cakeData:Cake)=>{
+        const cake=this.cakeService.getCake(this.id);
+        // this.cakeService.cakeSelected.subscribe(cakeData=>{
+        //   const cake={id:cakeData._id,name:cakeData.name,category:cakeData.category,price:cakeData.price,imagePath:cakeData.imagePath,description:cakeData.description,features:cakeData.features};
+         
+          cakeName=cake.name;
+          cakeImagePath=cake.imagePath;
+          cakeDescription=cake.description;
+          cakeCategory=cake.category;
+          cakePrice=cake.price;
+  
+          if(cake['features']){
+            for(let feature of cake.features){
+              cakeFeatures.push(
+                new FormGroup({
+                  'feature':new FormControl(feature,Validators.required)
+                })
+              );
+            }
+          }
+        
+     //   });
+      
+     // }
+     
+     // );
+   
     }
+  
     this.cakeForm=new FormGroup({
       'name':new FormControl(cakeName,Validators.required),
       'imagePath':new FormControl(cakeImagePath,Validators.required),
       'description':new FormControl(cakeDescription,Validators.required),
       'category':new FormControl(cakeCategory,Validators.required),
+      'price':new FormControl(cakePrice,Validators.required),
       'features':cakeFeatures
     });
+    
   }
 
   onAddFeature(){

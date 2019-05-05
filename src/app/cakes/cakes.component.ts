@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CakeService } from './cake.service';
+import { Cake } from './cake.model';
 
 @Component({
   selector: 'app-cakes',
@@ -7,7 +8,7 @@ import { CakeService } from './cake.service';
   styleUrls: ['./cakes.component.css']
 })
 export class CakesComponent implements OnInit {
-  //selectedCake:Cake;
+  //selectedCake: Cake;
   constructor(private cakeService:CakeService) { }
 
   ngOnInit() {

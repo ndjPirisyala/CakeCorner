@@ -1,6 +1,7 @@
 import { Feature } from '../shared/feature.model';
 
 export class Cake{
+     public id:string;
      public name:string;
      public category:string;
      public price:number;
@@ -8,10 +9,11 @@ export class Cake{
      public description:string;
      public features:Feature[];
 
-     constructor(name:string,
+     constructor(id:string,name:string,
         cat:string,prc:number,img:string,desc:string,
         features:Feature[]
     ){
+        this.id=id;
         this.name=name;
         this.category=cat;
         this.price=prc;

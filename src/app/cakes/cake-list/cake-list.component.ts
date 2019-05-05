@@ -17,7 +17,7 @@ export class CakeListComponent implements OnInit,OnDestroy {
 
   constructor(private cakeService:CakeService,
   private router:Router,
-private route:ActivatedRoute) { }
+  private route:ActivatedRoute) { }
 
   ngOnInit() {
     // this.subscription=this.cakeService.cakesChanged
