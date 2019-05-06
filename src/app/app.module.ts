@@ -33,6 +33,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserService } from './user/user.service';
 import { AuthGuard } from './auth/auth.guard';
 import { AuthInterceptor } from './auth/auth.interceptor';
+import { UpdateProfileComponent } from './user-profile/update-profile/update-profile.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { AuthInterceptor } from './auth/auth.interceptor';
     CakeEditComponent,
     LoginComponent,
     RegisterComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    UpdateProfileComponent
 
   ],
   imports: [
